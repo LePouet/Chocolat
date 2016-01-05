@@ -360,10 +360,14 @@
 
             this.elems.overlay = $('<div/>', {
                 'class' : 'chocolat-overlay'
-            }).appendTo(this.elems.wrapper);
+            });
 
             this.elems.loader = $('<div/>', {
                 'class' : 'chocolat-loader'
+            });
+
+            this.elems.top = $('<div/>', {
+                'class' : 'chocolat-top'
             }).appendTo(this.elems.wrapper);
 
             this.elems.content = $('<div/>', {
@@ -375,42 +379,39 @@
                 'src' : ''
             }).appendTo(this.elems.content);
 
-            this.elems.top = $('<div/>', {
-                'class' : 'chocolat-top'
-            }).appendTo(this.elems.wrapper);
-
             this.elems.left = $('<div/>', {
                 'class' : 'chocolat-left'
-            }).appendTo(this.elems.wrapper);
-
-            this.elems.right = $('<div/>', {
-                'class' : 'chocolat-right'
-            }).appendTo(this.elems.wrapper);
-
-            this.elems.bottom = $('<div/>', {
-                'class' : 'chocolat-bottom'
-            }).appendTo(this.elems.wrapper);
-
-            this.elems.fullscreen = $('<span/>', {
-                'class' : 'chocolat-fullscreen'
-            }).appendTo(this.elems.bottom);
-
-            this.elems.description = $('<span/>', {
-                'class' : 'chocolat-description'
-            }).appendTo(this.elems.bottom);
+            }).appendTo(this.elems.top);
 
             this.elems.pagination = $('<span/>', {
                 'class' : 'chocolat-pagination'
-            }).appendTo(this.elems.bottom);
+            }).appendTo(this.elems.top);
+
+            this.elems.right = $('<div/>', {
+                'class' : 'chocolat-right'
+            }).appendTo(this.elems.top);
+
+            this.elems.bottom = $('<div/>', {
+                'class' : 'chocolat-bottom'
+            });
+
+            this.elems.fullscreen = $('<span/>', {
+                'class' : 'chocolat-fullscreen'
+            });
+
+            this.elems.description = $('<span/>', {
+                'class' : 'chocolat-description'
+            });
+
 
             this.elems.setTitle = $('<span/>', {
                 'class' : 'chocolat-set-title',
                 'html' : this.settings.setTitle
-            }).appendTo(this.elems.bottom);
+            });
 
             this.elems.close = $('<span/>', {
                 'class' : 'chocolat-close'
-            }).appendTo(this.elems.top);
+            });
         },
 
         openFullScreen : function() {
